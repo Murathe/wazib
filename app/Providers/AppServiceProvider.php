@@ -18,7 +18,14 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('datetime', function ($expression) {
             return "<?php echo ($expression)->format('m/d/Y H:i'); ?>";
         });
+        
+        // $descriotion= $_POST['descriotion'];
+        // $Vedio_name= $_POST['Vedio_name'];
+        // $image = $_POST['image'];
+        
     }
+
+    
 
     /**
      * Register any application services.
@@ -30,3 +37,7 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 }
+
+// if (isset($_POST['submit'])){
+    
+// }

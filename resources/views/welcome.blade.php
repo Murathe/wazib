@@ -1,74 +1,3 @@
-<!-- <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Wazi</title> -->
-
-        <!-- Fonts -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> -->
-
-        <!-- Styles -->
-        <!-- <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        
-    </body>
-</html> -->
-
 @extends('layouts.app')
 
 @section('title', 'Page Title')
@@ -79,14 +8,41 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 
+
 @section('content')
-    <p>This is my body content.</p>
+    {{-- <p>This is my body content.</p>
     The current UNIX timestamp is {{ time() }}.
-    <div>
-        @includeIf('view.name', ['some' => 'data'])
-        <form>
-            <input aria-label="trial">
+    <div> --}}
+        {{-- @includeIf('view.name', ['some' => 'data']) --}}
+        <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="">
+            <div class="form-group row">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Vedio Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputVedio_name" name="Vedio_name" placeholder="Vedio_name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputUser" class="col-sm-2 col-form-label">Video Description</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputDescription" name="descriotion" placeholder="Video_description">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Image</label>
+              <div class="col-sm-10">
+                <input data-preview="#preview" name="input_img" type="file" id="imageInput">
+                
+                {{-- <input type="image" class="form-control" id="inputImage" name="image" placeholder="image"> --}}
+                {{-- <img class="col-sm-6" id="preview"  src=""> --}}
+              </div>
+            </div>
+            {{-- <div class="form-group row">
+              <div class="offset-sm-2 col-sm-10">
+                <input type="submit" value="Sign in" name="submit" class="btn btn-primary"/>
+              </div>
+            </div> --}}
         </form>
     </div>
+    
     
 @endsection

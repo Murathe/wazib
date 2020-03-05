@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\contentsController;
 
-// Route::get('blade', function () {
-//     return view('welcome');
-// });
+Route::get('/','contentsController@index');
 
-// Route::get('greeting', function () {
-//     return view('welcome', ['name' => 'Samantha']);
+
+
+
+// Route::get('/', function () {
+//     return view('contents');
 // });
