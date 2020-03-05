@@ -13,11 +13,11 @@
 
 use App\Http\Controllers\contentsController;
 
-Route::get('/','contentsController@index');
+Route::get('/','contentsController@index');  //controller styles for urls and routes
 
 
 
 
 // Route::get('/', function () {
-//     return view('contents');
+//     return view('contents');             //closure style for urls
 // });

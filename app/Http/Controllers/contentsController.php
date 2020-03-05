@@ -8,7 +8,8 @@ class contentsController extends Controller
 {
     public function index(){
         $title = "Contents";
-
-        return view('contents', compact('title'));
+        $data = "this page works fine";
+        
+        return view('contents', compact('title','data'));
     }
 }

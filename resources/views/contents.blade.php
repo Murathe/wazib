@@ -3,5 +3,5 @@
 @section('title', $title)
 
 @section('body')
-    this page works
+    {{ $data }}
 @endsection
