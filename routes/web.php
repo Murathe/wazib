@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('blade', function () {
+//     return view('welcome');
+// });
+
+// Route::get('greeting', function () {
+//     return view('welcome', ['name' => 'Samantha']);
+// });
