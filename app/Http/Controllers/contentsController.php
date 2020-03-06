@@ -17,8 +17,12 @@ class contentsController extends Controller
         $title = "Content-images";
         $data = "this page works fine";
 
-        $datasss = $request['imageName'];
-        print($datasss);
+        $name = $request['imageName'];
+        print($name);
+        $description = $request['description'];
+        print($description);
+        $image = $request['image'];
+        print($image);
         return view('contents/content-image', compact('title','data'));
     }
 
