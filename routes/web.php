@@ -14,6 +14,9 @@
 use App\Http\Controllers\contentsController;
 
 Route::get('/','contentsController@index');  //controller styles for urls and routes
+Route::get('images','contentsController@images');  
+Route::get('videos','contentsController@videos');  
+Route::get('texts','contentsController@texts');  
 
 
 
