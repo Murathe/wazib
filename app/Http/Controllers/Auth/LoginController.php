@@ -59,7 +59,7 @@ class LoginController extends Controller
         $username = $request->request->input('username');
         $myPassword = $request->input('myPassword');
 
-        $user = DB::table('admin')->where('username,'$username)->limit(1)->first();
+        // $user = DB::table('admin')->where('username,'$username)->limit(1)->first();
         if($user->username == $username && $user->password == $myPassword)
         {
             session(['is_logged_in' => TRUE]);
