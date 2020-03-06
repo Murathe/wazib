@@ -12,18 +12,19 @@
             <!-- Content -->
             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
             <div>
-                <h5 class="pink-text"><i class="fas fa-film"></i> Videos</h5>
-                <h3 class="card-title pt-2"><strong>Video Contents</strong></h3>
+                <h5 class="pink-text"><i class="fas fa-image"></i>Images</h5>
+                <h3 class="card-title pt-2"><strong>Image Contents</strong></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                 optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                 Odit sed qui, dolorum!.</p>
-                <a class="btn btn-info" href="{!! url('/videos'); !!}"><i class="fas fa-film left"></i> View Contents</a>
+                <a class="btn btn-info" href="{!! url('/images'); !!}"><i class="fas fa-image left"></i> View Contents</a>
             </div>
             </div>
         
             </div>
             <!-- Card -->
         </div>
+
         {{-- *************************************************************** --}}
         <div class="col-md-4">
             <!-- Card -->
@@ -32,7 +33,7 @@
                 <!-- Card image -->
                 <div class="view overlay">
                 <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap">
-                <a>
+                <a href="{!! url('/images'); !!}">
                     <div class="mask rgba-white-slight"></div>
                 </a>
                 </div>
@@ -45,26 +46,13 @@
                 <div class="card-body">
             
                 <!-- Title -->
-                <h4 class="card-title">Video Contents</h4>
+                <h4 class="card-title">Image Contents</h4>
                 <hr>
                 <!-- Text -->
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                     content.</p>
             
                 </div>
-            
-                <!-- Card footer -->
-                {{-- <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
-                <ul class="list-unstyled list-inline font-small">
-                    <li class="list-inline-item pr-2 white-text"><i class="far fa-clock pr-1"></i>05/10/2015</li>
-                    <li class="list-inline-item pr-2"><a href="#" class="white-text"><i
-                        class="far fa-comments pr-1"></i>12</a></li>
-                    <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="fab fa-facebook-f pr-1">
-                        </i>21</a></li>
-                    <li class="list-inline-item"><a href="#" class="white-text"><i class="fab fa-twitter pr-1"> </i>5</a></li>
-                </ul>
-                </div> --}}
-            
             </div>
           <!-- Card -->
         </div>

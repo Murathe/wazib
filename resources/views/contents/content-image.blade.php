@@ -16,24 +16,25 @@
             <h4 class="card-title"><a></a></h4>
             {{-- <!-- Text --> --}}
             <div class="card-text">
-                <form class="text-center" style="color: #757575;" action="#!" method="post">
+                <form class="text-center" style="color: #757575;" action="images" method="POST">
                     {{-- field1 --}}
+                    {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                     <div class="md-form">
-                        <input type="text" id="inputImageName" class="form-control">
+                        <input type="text" id="inputImageName" name="imageName" class="form-control">
                         <label for="inputImageName">Image Name</label>
                     </div>
 
                     <div class="md-form">
-                        <input type="text" id="inputDescription" class="form-control">
+                        <input type="text" id="inputDescription" name="description" class="form-control">
                         <label for="inputDescription">Breif Description</label>
                     </div>
 
                     <div class="md-form" style="text-align:left;">
-                        <input type="file" id="inputImage">
+                        <input type="file" id="inputImage" name="image">
                     </div>
                     <div>
                         {{-- <!-- Button --> --}}
-                        <button type="button" class="btn btn-info btn-rounded">Post</button>
+                        <button type="submit" id="Submit" name="submit" class="btn btn-info btn-rounded">Post</button>
                     </div>
                 </form>
             </div>
