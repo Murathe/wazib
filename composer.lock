@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "000bd114d820807f64da7215268066ed",
+    "content-hash": "0201fd8ef6d21fddb5d1b018b0920121",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2476,16 +2476,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v10.3.1",
+            "version": "v10.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "9aa511fda4dc4e67bd771f21cf0cd56f7b90a279"
+                "reference": "7435eb618e72c6b3e8d0f872a58548b83b819a92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/9aa511fda4dc4e67bd771f21cf0cd56f7b90a279",
-                "reference": "9aa511fda4dc4e67bd771f21cf0cd56f7b90a279",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/7435eb618e72c6b3e8d0f872a58548b83b819a92",
+                "reference": "7435eb618e72c6b3e8d0f872a58548b83b819a92",
                 "shasum": ""
             },
             "require": {
@@ -2517,7 +2517,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2020-02-13T16:06:36+00:00"
+            "time": "2020-03-04T21:02:20+00:00"
         },
         {
             "name": "mockery/mockery",
