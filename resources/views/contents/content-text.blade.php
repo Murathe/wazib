@@ -4,35 +4,35 @@
 
 @section('body')
 {{-- table --}}
-<div class="row">
+<div class="row" style="">
     <!-- Table with panel -->
-    <div class="card card-cascade narrower">
+    <div class="card card-cascade narrower" style="width:100%;">
 
         <!--Card image-->
-        <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+        <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center" style="">
     
-        <div>
-            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-            <i class="fas fa-th-large mt-0"></i>
-            </button>
-            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-            <i class="fas fa-columns mt-0"></i>
-            </button>
-        </div>
-    
-        <div class="white-text mx-3">Table name</div>
-    
-        <div>
-            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-            <i class="fas fa-pencil-alt mt-0"></i>
-            </button>
-            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-            <i class="far fa-trash-alt mt-0"></i>
-            </button>
-            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-            <i class="fas fa-info-circle mt-0"></i>
-            </button>
-        </div>
+            <div>
+                <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                <i class="fas fa-th-large mt-0"></i>
+                </button>
+                <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                <i class="fas fa-columns mt-0"></i>
+                </button>
+            </div>
+        
+            <div class="white-text mx-3">Table name</div>
+        
+            <div>
+                <button type="submit" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                <i class="fas fa-pencil-alt mt-0"></i>
+                </button>
+                <button type="submit" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                <i class="far fa-trash-alt mt-0"></i>
+                </button>
+                <button type="submit" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                <i class="fas fa-info-circle mt-0"></i>
+                </button>
+            </div>
     
         </div>
         <!--/Card image-->
@@ -47,7 +47,7 @@
             <thead>
                 <tr>
                     <th>
-                        <input class="form-check-input" type="checkbox" id="checkbox" disabled>
+                        <input class="form-check-input" type="checkbox" id="checkbox" hidden>
                         <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
                     </th>
                     <th class="th-lg">
