@@ -17,9 +17,12 @@ Route::get('/','contentsController@index');  //controller styles for urls and ro
 Route::get('images','contentsController@images');  
 Route::get('videos','contentsController@videos');  
 Route::get('texts','contentsController@texts'); 
+Route::get('audios','contentsController@audios'); 
 
 Route::post('images','contentsController@images');
+Route::post('videos','contentsController@videos');
 Route::post('texts','contentsController@texts');
+Route::post('audios','contentsController@audios');
 
 
 

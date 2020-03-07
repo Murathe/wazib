@@ -18,25 +18,43 @@ class contentsController extends Controller
         $data = "this page works fine";
 
         $name = $request['imageName'];
-        print($name);
         $description = $request['description'];
-        print($description);
         $image = $request['image'];
-        print($image);
+
+
         return view('contents/content-image', compact('title','data'));
     }
 
-    public function videos(){
+    public function videos(Request $request){
         $title = "Content-videos";
         $data = "this page works fine";
         
+        $name = $request['imageName'];
+        $description = $request['description'];
+        $image = $request['image'];
+
         return view('contents/content-video', compact('title','data'));
     }
 
-    public function texts(){
+    public function texts(Request $request){
         $title = "Content-texts";
         $data = "this page works fine";
+
+        $name = $request['imageName'];
+        $description = $request['description'];
+        $image = $request['image'];
         
         return view('contents/content-text', compact('title','data'));
+    }
+
+    public function audios(Request $request){
+        $title = "Content-audio";
+        $data = "this page works fine";
+
+        $name = $request['imageName'];
+        $description = $request['description'];
+        $image = $request['image'];
+        
+        return view('contents/content-audio', compact('title','data')); 
     }
 }
