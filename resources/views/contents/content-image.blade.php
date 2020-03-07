@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="modal-footer justify-content-center">
                                     {{-- <!-- Button --> --}}
-                                    <button type="submit" id="Submit" name="submit" class="btn btn-info btn-rounded">Post</button>
+                                    <button type="submit" id="Submit" name="submit" class="btn btn-deep-orange btn-rounded">Post</button>
                                 </div>
                             </form>
                         </div>

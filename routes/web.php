@@ -19,6 +19,7 @@ Route::get('videos','contentsController@videos');
 Route::get('texts','contentsController@texts'); 
 
 Route::post('images','contentsController@images');
+Route::post('texts','contentsController@texts');
 
 
 
