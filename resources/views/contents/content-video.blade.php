@@ -30,7 +30,7 @@
                     <h4 class="card-title"><a></a></h4>
                     {{-- <!-- Text --> --}}
                     <div class="card-text">
-                        <form class="text-center" style="color: #757575;" action="texts" method="POST">
+                        <form class="text-center" style="color: #757575;" action="videos" method="POST">
                             {{-- field1 --}}
                             {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                             <div class="md-form">
