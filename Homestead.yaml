@@ -15,6 +15,7 @@ sites:
         to: /home/vagrant/code/public
 databases:
     - homestead
+    - wazi_db
 features:
     -
         mariadb: false
