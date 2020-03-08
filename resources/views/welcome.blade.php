@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <style>
             html, body {
                 background-color: #fff;
@@ -38,7 +39,7 @@
             .top-right {
                 position: absolute;
                 right: 10px;
-                top: 18px;
+                top: 1px;
             }
 
             .content {
@@ -60,12 +61,12 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 0;
             }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -79,15 +80,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    WAZI MAIN DASHBOARD
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            </div>
+            <div class="row">
+                <div class="">
+                    <a href="" class="col-md-6">Wazi Admin</a>
+                    <a href="" class="col-md-6">Therapist</a>
                 </div>
             </div>
         </div>
