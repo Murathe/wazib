@@ -41,9 +41,11 @@
                 margin-bottom: 0;
             }
         </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div class="">
+        <div class="container">
+            <div class="row">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -54,16 +56,18 @@
                     @endif
                 </div>
             @endif
-
-            <div class="content">
+            </div>
+            <div class="content row">
                 <div class="title m-b-md">
                     WAZI MAIN DASHBOARD
                 </div>
             </div>
             <div class="row">
-                <div class="">
-                    <a href="" class="col-md-6">Wazi Admin</a>
-                    <a href="" class="col-md-6">Therapist</a>
+                <div class="col-md-6 admin">
+                    <button href="#" type="button" class="btn btn-info">Wazi Admin</button>
+                </div>
+                <div class="col-md-6 therapist">
+                    <button href="" class="btn btn-info">Therapist</button>
                 </div>
             </div>
         </div>
