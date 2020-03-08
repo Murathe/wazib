@@ -1,48 +1,71 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wazi</title>
+        <style>
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
 
-@section('title', 'Page Title')
+            .position-ref {
+                position: relative;
+            }
 
-@section('sidebar')
-    @parent
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 1px;
+            }
 
-    <p>This is appended to the master sidebar.</p>
-@endsection
+            .content {
+                text-align: center;
+            }
 
+            .title {
+                font-size: 84px;
+            }
 
-@section('content')
-    {{-- <p>This is my body content.</p>
-    The current UNIX timestamp is {{ time() }}.
-    <div> --}}
-        {{-- @includeIf('view.name', ['some' => 'data']) --}}
-        <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="">
-            <div class="form-group row">
-              <label for="inputEmail" class="col-sm-2 col-form-label">Vedio Name</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputVedio_name" name="Vedio_name" placeholder="Vedio_name">
-              </div>
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @if (Auth::check())
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    @endif
+                </div>
+            @endif
+
+            <div class="content">
+                <div class="title m-b-md">
+                    WAZI MAIN DASHBOARD
+                </div>
             </div>
-            <div class="form-group row">
-              <label for="inputUser" class="col-sm-2 col-form-label">Video Description</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputDescription" name="descriotion" placeholder="Video_description">
-              </div>
+            <div class="row">
+                <div class="">
+                    <a href="" class="col-md-6">Wazi Admin</a>
+                    <a href="" class="col-md-6">Therapist</a>
+                </div>
             </div>
-            <div class="form-group row">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">Image</label>
-              <div class="col-sm-10">
-                <input data-preview="#preview" name="input_img" type="file" id="imageInput">
-                
-                {{-- <input type="image" class="form-control" id="inputImage" name="image" placeholder="image"> --}}
-                {{-- <img class="col-sm-6" id="preview"  src=""> --}}
-              </div>
-            </div>
-            {{-- <div class="form-group row">
-              <div class="offset-sm-2 col-sm-10">
-                <input type="submit" value="Sign in" name="submit" class="btn btn-primary"/>
-              </div>
-            </div> --}}
-        </form>
-    </div>
-    
-    
-@endsection
+        </div>
+    </body>
+</html>
