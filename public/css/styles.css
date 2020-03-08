@@ -1,0 +1,36 @@
+
+
+/********** FILE IMPORTS **********/
+/*************************************/
+
+@import url('bootstrap.min.css');
+@import url('bootstrap-override.css');
+@import url('font-awesome.min.css');
+@import url('animate.css');
+
+
+
+/********** GENERAL STUFF **********/
+/*************************************/
+
+html, body {
+	background-color: #ffffff;
+	color: #272727;
+	font-family: 'LatoRegular', sans-serif;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'LatoRegular', sans-serif;
+}
+
+a {
+    color: #8f9948 !important;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.mt50 {
+    margin-top: 50px;
+}

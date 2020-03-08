@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
+                    @if (Session::get('is_logged_in') == TRUE)
                     You are logged in!
+                    @else
+                    You are Logged Out!
+                    @endif
                 </div>
             </div>
         </div>

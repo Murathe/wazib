@@ -65,11 +65,10 @@ class LoginController extends Controller
         $user = \DB::table('login')->where('username',$username)->limit(1)->first();
         if($user->username == $username && $user->password == $password)
         {
-            session(['is_logged_in' => TRUE]);
-            // return redirect('/admin/dashboard');
-            echo "I'm Logged In";
+            session(['is_logged_in' => TRUE, 'therapist_name' => $user->username]);
+            return redirect('tests');
         }
-        else if($user->username != $username || $user->password !=$myPassword)
+        else if($user->username != $username || $user->password !=$password)
         {
             $request->session()->flash('Incorrect_password','Invalid Username & Password.');
             // return redirect('/admin/login');

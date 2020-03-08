@@ -42,19 +42,15 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li
-                        @else
+                        @if (Session::get('is_logged_in') == TRUE)
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Session::get('therapist_name') }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="/logout">
                                             Logout
                                         </a>
 
@@ -62,8 +58,26 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('tests.index') }}">
+                                            Take Quiz
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('questions.create') }}">
+                                            Create Assessment
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/displayTherapists">
+                                            Display Therapists
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
+                        @else
+                            <li><a href="/login">Login</a></li>
                         @endif
                     </ul>
                 </div>
