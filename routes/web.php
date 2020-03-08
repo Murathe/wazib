@@ -14,10 +14,10 @@
 use App\Http\Controllers\contentsController;
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/', 'welcome');
+Route::get('/', function () {
+    return view('welcome');
+});
+// Route::get('/', 'welcome');
 Route::get('/contents','contentsController@index');  //controller styles for urls and routes
 Route::get('images','contentsController@images');  
 Route::get('videos','contentsController@videos');  
