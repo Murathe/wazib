@@ -14,7 +14,7 @@
 use App\Http\Controllers\contentsController;
 
 
-Route::get('/', function () {
+Route::get('/', function () { 
     return view('welcome');
 });
 
@@ -40,3 +40,8 @@ Route::post('audios','contentsController@audios');
 // Route::get('/', function () {
 //     return view('contents');             //closure style for urls
 // });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/login', 'Auth\LoginController@authenticate'); 

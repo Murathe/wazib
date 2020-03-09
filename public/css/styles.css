@@ -56,3 +56,6 @@ html, body {
 .file-field.big .file-path-wrapper .file-path {
     height: 3rem; 
 } */
+input[type=text], select{
+  border-radius: 20px;
+}
