@@ -35,6 +35,7 @@
                 {{-- <input type="image" class="form-control" id="inputImage" name="image" placeholder="image"> --}}
                 {{-- <img class="col-sm-6" id="preview"  src=""> --}}
               </div>
+
             </div>
             {{-- <div class="form-group row">
               <div class="offset-sm-2 col-sm-10">

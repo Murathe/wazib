@@ -32,8 +32,43 @@ class LoginController extends Controller
      *
      * @return void
      */
+    public function username()
+    {
+        return 'username';
+    }
+    
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+
+    public function authenticate(Request $request){
+        $rules = [
+            'username' => 'required',
+            'myPassword' => 'required',
+        ];
+
+        $messages = [
+            'username.required' => 'Enter username',
+            'myPassword.required' => 'Enter password ',
+
+        ];
+        $this->validate($request, $rules, $messages);
+
+        $username = $request->request->input('username');
+        $myPassword = $request->input('myPassword');
+
+        $user = DB::table('admin')->where('username,'$username)->limit(1)->first();
+        if($user->username == $username && $user->password == $myPassword)
+        {
+            session(['is_logged_in' => TRUE]);
+            return redirect('/admin/dashboard');
+        }
+        else if($user->username != $username || $user->password !=$myPassword)
+        {
+            $request->session()->flash('Incorrect_password','Invalid Username & Password.');
+            return redirect('/admin/login');
+        }
     }
 }
