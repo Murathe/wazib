@@ -1,3 +1,4 @@
+@extends('layouts.app')
 @section('content')
 <div class="container">
     <div class="row">
@@ -11,7 +12,8 @@
                         </div>
                     @endif
                     @if (Session::get('is_logged_in') == TRUE)
-                    You are logged in!
+                    Uko ndaani ndaaaani ndani kabisa!
+                    <!-- You are logged in! -->
                     @else
                     You are Logged Out!
                     @endif
@@ -19,5 +21,9 @@
             </div>
         </div>
     </div>
+</div>
+<!--Try build a simple admin dashboard-->
+<div>
+    
 </div>
 @endsection

@@ -41,6 +41,7 @@ Route::get('/logout', 'HomeController@logout');
     Route::resource('results', 'ResultsController');
     Route::post('results_mass_destroy', ['uses' => 'ResultsController@massDestroy', 'as' => 'results.mass_destroy']);
 use App\Http\Controllers\contentsController;
+
 Route::get('contents','contentsController@index');  //controller styles for urls and routes
 Route::get('images','contentsController@images');  
 Route::get('videos','contentsController@videos');  
