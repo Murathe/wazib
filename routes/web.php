@@ -15,7 +15,7 @@ use App\Http\Controllers\contentsController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 // Route::get('/', 'welcome');
 Route::get('/contents','contentsController@index');  //controller styles for urls and routes
