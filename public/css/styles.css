@@ -1,10 +1,11 @@
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    height: 100vh;
-    margin: 0;
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0;
 }
 
 
@@ -59,13 +60,23 @@ html, body {
 
 
 /*styling for landing*/
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
 
+.service {
+  position: absolute;
+  width: 550px;
+  height: 427px;
+  left: 127px;
+  top: 259px;
+
+  background: #F26A30;
+}
+
 /*styling for login page*/
-.login{
+.login {
   align-items: center;
   text-align: center;
 }
