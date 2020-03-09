@@ -14,7 +14,6 @@
 use App\Http\Controllers\contentsController;
 
 
-<<<<<<< HEAD
 Route::get('/', function () { 
     return view('welcome');
 });
@@ -25,7 +24,6 @@ Route::get('landing/', function () {
 });
 // Route::get('/', 'welcome');
 Route::get('/contents','contentsController@index');  //controller styles for urls and routes
-=======
 Route::get('/', function () {
     return view('home');
 });
@@ -59,14 +57,11 @@ Route::post('audios','contentsController@audios');
     Route::post('questions_options_mass_destroy', ['uses' => 'QuestionsOptionsController@massDestroy', 'as' => 'questions_options.mass_destroy']);
     Route::resource('results', 'ResultsController');
     Route::post('results_mass_destroy', ['uses' => 'ResultsController@massDestroy', 'as' => 'results.mass_destroy']);
-use App\Http\Controllers\contentsController;
 
 Route::get('/','contentsController@index');  //controller styles for urls and routes
->>>>>>> 07464c5e14e72ddfc130c28137e8b522e7e7e641
 Route::get('images','contentsController@images');  
 Route::get('videos','contentsController@videos');  
 Route::get('texts','contentsController@texts'); 
-Route::get('audios','contentsController@audios'); 
 
 Route::post('images','contentsController@images');
 Route::post('videos','contentsController@videos');
@@ -79,11 +74,8 @@ Route::post('audios','contentsController@audios');
 // Route::get('/', function () {
 //     return view('contents');             //closure style for urls
 // });
-<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/login', 'Auth\LoginController@authenticate'); 
-=======
->>>>>>> 07464c5e14e72ddfc130c28137e8b522e7e7e641

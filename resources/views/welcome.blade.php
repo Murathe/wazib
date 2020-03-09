@@ -1,52 +1,35 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Wazi</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                    @endif
-                </div>
-            @endif
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div><!--for styling-->
-                <div class="col-md-6 jumbotron">
-                    <h1>MAIN DASHBOARD</h1>
-                </div>
-                <div class="col-md-3"></div><!--for styling-->
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <button>ADMIN</button>
-                </div>
-                <div class="col-md-6">
-                </div>
-                <div class="col-md-3">
-                    <button>THERAPIST</button>
-                </div>
-            </div>
-            {{-- <div class="form-group row">
-              <div class="offset-sm-2 col-sm-10">
-                <input type="submit" value="Sign in" name="submit" class="btn btn-primary"/>
-              </div>
-            </div> --}}
-        </form>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Card -->
+      <div class="card col-md-4">
+
+        <!-- Card image -->
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
+
+        <!-- Card content -->
+        <div class="card-body">
+
+          <!-- Title -->
+          <h4 class="card-title"><a>Card title</a></h4>
+          <!-- Text -->
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <!-- Button -->
+          <a href="#" class="btn btn-primary">Button</a>
+
+        </div>
+
+      </div>
+      <!-- Card -->
+      <div class="service card">
+        <button class="btn btn-danger">Service Provider</button>
+        <button class="btn btn-success">Wazi Amin</button>
+      </div>
     </div>
-    
-    
+  </div>
+</div>
 @endsection
