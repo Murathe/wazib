@@ -1,10 +1,11 @@
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    height: 100vh;
-    margin: 0;
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0;
 }
 
 
@@ -56,6 +57,37 @@ html, body {
 .file-field.big .file-path-wrapper .file-path {
     height: 3rem; 
 } */
-input[type=text], select{
+input[type=text],
+input[type=password] {
   border-radius: 20px;
+  position: absolute;
+  left: 25.08%;
+  right: 25.08%;
+  top: 36.21%;
+  bottom: 58.82%;
+
+  background: #FFFFFF;
+  border: 4px solid #39AACE;
+  box-sizing: border-box;
+  border-radius: 30.5px;
+}
+
+label {
+  position: absolute;
+  left: 31.88%;
+  right: 34.14%;
+  top: 28.24%;
+  bottom: 63.85%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #39AACE;
+
 }
