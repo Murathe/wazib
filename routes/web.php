@@ -1,23 +1,3 @@
-@endif
-                    @if (Session::get('is_logged_in') == TRUE)
-                    You are logged in!
-                    @else
-                    You are Logged Out!
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
-(edited)
-
-
-
-
-
-
-Joyce Mungai  12:29 PM
 <?php
 /*
 |--------------------------------------------------------------------------

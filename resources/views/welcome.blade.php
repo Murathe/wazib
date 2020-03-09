@@ -1,75 +1,48 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Wazi</title>
-        <style>
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+@extends('layouts.app')
 
-            .position-ref {
-                position: relative;
-            }
+@section('title', 'Page Title')
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 1px;
-            }
+@section('sidebar')
+    @parent
 
-            .content {
-                text-align: center;
-            }
+    <p>This is appended to the master sidebar.</p>
+@endsection
 
-            .title {
-                font-size: 84px;
-            }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 0;
-            }
-        </style>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+@section('content')
+    {{-- <p>This is my body content.</p>
+    The current UNIX timestamp is {{ time() }}.
+    <div> --}}
+        {{-- @includeIf('view.name', ['some' => 'data']) --}}
+        <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="">
+            <div class="form-group row">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Vedio Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputVedio_name" name="Vedio_name" placeholder="Vedio_name">
+              </div>
             </div>
-            <div class="content row">
-                <div class="title m-b-md">
-                    WAZI MAIN DASHBOARD
-                </div>
+            <div class="form-group row">
+              <label for="inputUser" class="col-sm-2 col-form-label">Video Description</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputDescription" name="descriotion" placeholder="Video_description">
+              </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 admin">
-                    <button href="#" type="button" class="btn btn-info">Wazi Admin</button>
-                </div>
-                <div class="col-md-6 therapist">
-                    <button href="" class="btn btn-info">Therapist</button>
-                </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Image</label>
+              <div class="col-sm-10">
+                <input data-preview="#preview" name="input_img" type="file" id="imageInput">
+                
+                {{-- <input type="image" class="form-control" id="inputImage" name="image" placeholder="image"> --}}
+                {{-- <img class="col-sm-6" id="preview"  src=""> --}}
+              </div>
             </div>
-        </div>
-    </body>
-</html>
+            {{-- <div class="form-group row">
+              <div class="offset-sm-2 col-sm-10">
+                <input type="submit" value="Sign in" name="submit" class="btn btn-primary"/>
+              </div>
+            </div> --}}
+        </form>
+    </div>
+    
+    
+@endsection
