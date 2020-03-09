@@ -112,6 +112,13 @@ html, body {
   position: relative;
 }
 
+.landingc button{
+  border: 1px solid #39AACE;
+  border-radius: 30px;
+  background-color: beige;
+  color: #39AACE;
+}
+
 /*styling for login page*/
 .login {
   align-items: center;

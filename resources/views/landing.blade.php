@@ -23,12 +23,12 @@
       <div class="landingc card">
 
         <!-- Card image -->
-        <img class="card-img-top" src="img/unauthorized-person.svg" alt="Card image cap">
+        <img class="card-img-top" src="img/manager.svg" alt="Card image cap">
 
         <!-- Card content -->
         <div class="card-body">
           <!-- Button -->
-          <button class="btn btn-success">Wazi Amin</button>
+          <button class="btn btn-outline-info">Wazi Admin</button>
         </div>
       </div>
     </div>
