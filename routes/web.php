@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('dashboard/', function () {
-  return view('dashboard');
+Route::get('landing/', function () {
+  return view('landing');
 });
 // Route::get('/', 'welcome');
 Route::get('/contents','contentsController@index');  //controller styles for urls and routes
