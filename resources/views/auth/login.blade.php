@@ -17,11 +17,11 @@
                             <div class="col-md-6">
                                 <input id="username" type="text" class="auth form-control" name="username" value="{{ old('username') }}" required autofocus>
 
-                                @if ($errors->has('username'))
+                                <!-- @if ($errors->has('username'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('username') }}</strong>
                                     </span>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
 
@@ -31,11 +31,11 @@
                             <div class="col-md-6">
                                 <input id="password" type="password" class="auth form-control" name="password" required>
 
-                                @if ($errors->has('password'))
+                                <!-- @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
 
@@ -55,7 +55,7 @@
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" href="">
                                     Forgot Your Password?
                                 </a>
                             </div>

@@ -40,6 +40,13 @@
                     <button>THERAPIST</button>
                 </div>
             </div>
-        </div>
-    </body>
-</html>
+            {{-- <div class="form-group row">
+              <div class="offset-sm-2 col-sm-10">
+                <input type="submit" value="Sign in" name="submit" class="btn btn-primary"/>
+              </div>
+            </div> --}}
+        </form>
+    </div>
+    
+    
+@endsection
