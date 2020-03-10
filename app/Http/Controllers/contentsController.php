@@ -28,6 +28,10 @@ class contentsController extends Controller
 
     public function storeImages(Request $request){
         // $fileName = '';
+        // this->validate($request, [
+        //     'image' => 'max:2000'
+        // ]);
+
         $image = $request['image'];
         if ($image) {
             // get file name with extension
@@ -45,19 +49,20 @@ class contentsController extends Controller
             $image = $request->image->storeAs('public/imageCont', $fileName);
             // $urrl = Storage::url($image);
             
-            // *****to be enabled once running******
-            // return redirect('images');
         }else{
             $fileName = "noimage.png";
             print("please select an image");
         }
-
-        // create the post
+        
+        // create the new image
         $imgCont = new Image;
         $imgCont->title = $request['title'];
         $imgCont->description = $request['description'];
         $imgCont->imageName =  $fileName;
         $imgCont->save();
+
+        // *****to be enabled once running******
+        return redirect('/images');
     }
 
 
