@@ -92,28 +92,24 @@ class contentsController extends Controller
         $title = "Content-videos";
         $data = "this page works fine";
         
+
+        return view('contents/content-video', compact('title','data'));
+    }
+
+    public function storeVideo(request $request){
         $name = $request['videoName'];
         $description = $request['description'];
         $video = $request['video'];
         print($video);
         $urrl = '';
         if ($video) {
-            // $video = $request->video->store('public/videoCont');
             print($request->video->store('public/videoCont'));
-            // print(Storage::putFile('public',$request->file('image')));
             
-            // $urrl = Storage::url($video);
-            // print($urrl);
-
-            // return $urrl;
-
-            // *****to be enabled once running******
-            // return redirect('images');
         }else{
         //     print("please select a video");
         };
 
-        return view('contents/content-video', compact('title','data'));
+        
     }
 
 
