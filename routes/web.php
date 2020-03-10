@@ -66,7 +66,7 @@ Route::post('audios','contentsController@audios');
 // });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Auth::routes();
