@@ -98,10 +98,6 @@ class contentsController extends Controller
     }
 
     public function storeVideos(request $request){
-
-        $name = $request['videoName'];
-        $description = $request['description'];
-
         $video = $request['video'];
         if ($video) {
             // get file name with extension
@@ -158,6 +154,8 @@ class contentsController extends Controller
         return view('contents/content-text', compact('title','data'));
     }
 
+
+    // for the audio contents
     public function audios(Request $request){
         $title = "Content-audio";
         $data = "this page works fine";

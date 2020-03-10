@@ -163,8 +163,8 @@
                             {{-- field1 --}}
                             {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                             <div class="md-form">
-                                <input type="text" id="inputVideoName" name="videoName" class="form-control">
-                                <label for="inputVideoName">Video Name</label>
+                                <input type="text" id="inputTitle" name="title" class="form-control">
+                                <label for="inputTitle">Video Name</label>
                             </div>
             
                             <div class="md-form">
