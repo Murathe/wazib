@@ -15,7 +15,7 @@ class contentsController extends Controller
         return view('contents/content', compact('title','data'));
     }
     
-    // For the image contents**********************
+    // For the image contents save new and retrieve**********************
     public function images(Request $request){
         $title = "Content-images";
         $data = "this page works fine";
@@ -106,13 +106,21 @@ class contentsController extends Controller
 
 
 
+    // for the text contents
     public function texts(Request $request){
         $title = "Content-texts";
         $data = "this page works fine";
 
-        $name = $request['imageName'];
+        $title = $request['title'];
         $description = $request['description'];
-        $image = $request['image'];
+        $textContent = $request['textContent'];
+        $file = $request['file'];
+        print($file);
+
+        if($file){
+            print($request->file->store('public/textCont'));
+        }
+
         
         return view('contents/content-text', compact('title','data'));
     }

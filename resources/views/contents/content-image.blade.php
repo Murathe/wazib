@@ -128,6 +128,7 @@
     <!-- Table with panel -->
     </div>
     {{-- end table --}}
+    
 
     {{-- MODAL SECTION --}}
     <div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
