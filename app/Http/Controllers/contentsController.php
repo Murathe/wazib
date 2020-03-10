@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Image;
 use App\Video;
+use App\Text;
 
 class contentsController extends Controller
 {
@@ -155,6 +156,45 @@ class contentsController extends Controller
     }
 
 
+    public function storeTexts(request $request){
+        $file = $request['file'];
+        if ($file) {
+            // get file name with extension
+            $fileNameWithExt = $file->getClientOriginalName();
+
+            // get file name alone
+            $file = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+            // get file extension
+            $ext = $file->getClientOriginalExtension();
+            
+            // file name to store
+            $fileName = $file.'_'.time().'.'.$ext;
+            
+            $files = $request->file->storeAs('public/textCont', $fileName);
+            // print($request->video->store('public/videoCont'));
+            // $urrl = Storage::url($image);
+            
+            
+        }else{
+        //     print("please select a video");
+        };
+
+        // create the new image
+        $textCont = new Text;
+        $textCont->title = $request['title'];
+        $textCont->description = $request['description'];
+        $textCont->content = $request['content'];
+        $textCont->fileName =  $fileName;
+        $textCont->save();
+
+
+        return redirect('texts');
+    }
+
+
+
+
     // for the audio contents
     public function audios(Request $request){
         $title = "Content-audio";
@@ -170,5 +210,41 @@ class contentsController extends Controller
         }
         
         return view('contents/content-audio', compact('title','data')); 
+    }
+
+
+    public function storeAudios(request $request){
+        $file = $request['file'];
+        if ($file) {
+            // get file name with extension
+            $fileNameWithExt = $file->getClientOriginalName();
+
+            // get file name alone
+            $file = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+            // get file extension
+            $ext = $file->getClientOriginalExtension();
+            
+            // file name to store
+            $fileName = $file.'_'.time().'.'.$ext;
+            
+            $files = $request->file->storeAs('public/textCont', $fileName);
+            // print($request->video->store('public/videoCont'));
+            // $urrl = Storage::url($image);
+            
+            
+        }else{
+        //     print("please select a video");
+        };
+
+        // create the new image
+        $textCont = new Text;
+        $textCont->title = $request['title'];
+        $textCont->description = $request['description'];
+        $textCont->fileName =  $fileName;
+        $textCont->save();
+
+
+        return redirect('audios');
     }
 }

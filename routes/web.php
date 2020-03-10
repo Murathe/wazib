@@ -21,8 +21,8 @@ Route::get('audios','contentsController@audios');
 
 Route::post('images','contentsController@storeImages');
 Route::post('videos','contentsController@storeVideos');
-Route::post('texts','contentsController@texts');
-Route::post('audios','contentsController@audios');
+Route::post('texts','contentsController@storeTexts');
+Route::post('audios','contentsController@storeAudios');
 
 
 
