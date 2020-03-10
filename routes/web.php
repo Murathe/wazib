@@ -54,6 +54,11 @@ Route::post('audios','contentsController@audios');
 // Route::get('/', function () {
 //     return view('contents');             //closure style for urls
 // });
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
