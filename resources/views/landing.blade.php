@@ -28,7 +28,7 @@
         <!-- Card content -->
         <div class="card-body">
           <!-- Button -->
-          <button class="btn btn-outline-info">Wazi Admin</button>
+          <a href="{{ route('login') }}"><button class="btn btn-outline-info">Wazi Admin</button></a>
         </div>
       </div>
     </div>
