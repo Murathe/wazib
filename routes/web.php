@@ -40,6 +40,7 @@ Route::get('/logout', 'HomeController@logout');
     Route::post('questions_options_mass_destroy', ['uses' => 'QuestionsOptionsController@massDestroy', 'as' => 'questions_options.mass_destroy']);
     Route::resource('results', 'ResultsController');
     Route::post('results_mass_destroy', ['uses' => 'ResultsController@massDestroy', 'as' => 'results.mass_destroy']);
+
 use App\Http\Controllers\contentsController;
 
 Route::get('contents','contentsController@index');  //controller styles for urls and routes
@@ -51,6 +52,13 @@ Route::post('images','contentsController@images');
 Route::post('videos','contentsController@videos');
 Route::post('texts','contentsController@texts');
 Route::post('audios','contentsController@audios');
-// Route::get('/', function () {
-//     return view('contents');             //closure style for urls
-// });
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/login', 'Auth\LoginController@authenticate'); 

@@ -10,10 +10,6 @@
 
 
 @section('content')
-    {{-- <p>This is my body content.</p>
-    The current UNIX timestamp is {{ time() }}.
-    <div> --}}
-        {{-- @includeIf('view.name', ['some' => 'data']) --}}
         <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="">
             <div class="form-group row">
               <label for="inputEmail" class="col-sm-2 col-form-label">Vedio Name</label>
@@ -35,6 +31,7 @@
                 {{-- <input type="image" class="form-control" id="inputImage" name="image" placeholder="image"> --}}
                 {{-- <img class="col-sm-6" id="preview"  src=""> --}}
               </div>
+
             </div>
             {{-- <div class="form-group row">
               <div class="offset-sm-2 col-sm-10">
