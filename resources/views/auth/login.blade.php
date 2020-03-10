@@ -8,6 +8,7 @@
                 <div class="heading panel-heading">Login</div>
 
                 <div class="cbody panel-body">
+
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -22,6 +23,7 @@
                                         <strong>{{ $errors->first('username') }}</strong>
                                     </span>
                                 @endif -->
+
                             </div>
                         </div>
 
@@ -36,6 +38,7 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif -->
+
                             </div>
                         </div>
 
@@ -56,6 +59,7 @@
                                 </button>
 
                                 <a class="btn btn-link" href="">
+
                                     Forgot Your Password?
                                 </a>
                             </div>
