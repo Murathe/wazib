@@ -129,9 +129,13 @@ class contentsController extends Controller
         $title = "Content-audio";
         $data = "this page works fine";
 
-        $name = $request['imageName'];
+        $title = $request['title'];
         $description = $request['description'];
-        $image = $request['image'];
+        $file = $request['file'];
+
+        if($file){
+            print($request->file->store('public/audioCont'));
+        }
         
         return view('contents/content-audio', compact('title','data')); 
     }
