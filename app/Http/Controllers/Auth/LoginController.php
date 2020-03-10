@@ -66,7 +66,7 @@ class LoginController extends Controller
         if($user->username == $username && $user->password == $password)
         {
             session(['is_logged_in' => TRUE, 'therapist_name' => $user->username]);
-            return redirect('tests');
+            return redirect('dashboard');
         }
         else if($user->username != $username || $user->password !=$password)
         {
