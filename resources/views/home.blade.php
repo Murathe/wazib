@@ -17,6 +17,7 @@
                     @else
                     You are Logged Out!
                     @endif
+
                 </div>
             </div>
         </div>

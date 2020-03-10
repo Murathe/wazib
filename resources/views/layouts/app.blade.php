@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 890a18a86a29e944db45f84960d553d4bbc71cac
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -10,10 +13,11 @@
     <title>{{ config('app.name', 'Wazi') }}</title>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="sticky-top navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -25,9 +29,17 @@
                     </button> -->
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
+<<<<<<< HEAD
                         {{ config('app.name', 'Wazi') }}
                     </a>
                 </div>
+=======
+                        <img src="img/WaziLogo.png" alt="">
+                    </a>
+                </div>
+
+
+>>>>>>> 890a18a86a29e944db45f84960d553d4bbc71cac
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
@@ -80,6 +92,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
+<<<<<<< HEAD
 =======
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
@@ -151,3 +164,5 @@
 
 
 >>>>>>> bb4b9b4b47fbc16438a2e2c3a062af3f053b404c
+=======
+>>>>>>> 890a18a86a29e944db45f84960d553d4bbc71cac
