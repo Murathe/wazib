@@ -132,6 +132,7 @@ class contentsController extends Controller
         $title = $request['title'];
         $description = $request['description'];
         $file = $request['file'];
+        
 
         if($file){
             print($request->file->store('public/audioCont'));
