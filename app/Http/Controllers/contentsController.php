@@ -6,6 +6,7 @@ use Faker\Provider\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Image;
+use App\Video;
 
 class contentsController extends Controller
 {
@@ -50,7 +51,7 @@ class contentsController extends Controller
             // $urrl = Storage::url($image);
             
         }else{
-            $fileName = "noimage.png";
+            // $fileName = "noimage.png";
             print("please select an image");
         }
         
@@ -62,7 +63,7 @@ class contentsController extends Controller
         $imgCont->save();
 
         // *****to be enabled once running******
-        return redirect('/images');
+        return redirect('images');
     }
 
 
@@ -96,20 +97,43 @@ class contentsController extends Controller
         return view('contents/content-video', compact('title','data'));
     }
 
-    public function storeVideo(request $request){
+    public function storeVideos(request $request){
+
         $name = $request['videoName'];
         $description = $request['description'];
+
         $video = $request['video'];
-        print($video);
-        $urrl = '';
         if ($video) {
-            print($request->video->store('public/videoCont'));
+            // get file name with extension
+            $fileNameWithExt = $video->getClientOriginalName();
+
+            // get file name alone
+            $file = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+            // get file extension
+            $ext = $video->getClientOriginalExtension();
+            
+            // file name to store
+            $fileName = $file.'_'.time().'.'.$ext;
+            
+            $videos = $request->video->storeAs('public/videoCont', $fileName);
+            // print($request->video->store('public/videoCont'));
+            // $urrl = Storage::url($image);
+            
             
         }else{
         //     print("please select a video");
         };
 
-        
+        // create the new image
+        $videoCont = new Video;
+        $videoCont->title = $request['title'];
+        $videoCont->description = $request['description'];
+        $videoCont->videoName =  $fileName;
+        $videoCont->save();
+
+
+        return redirect('videos');
     }
 
 
