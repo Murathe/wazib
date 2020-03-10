@@ -19,7 +19,7 @@ Route::get('videos','contentsController@videos');
 Route::get('texts','contentsController@texts'); 
 Route::get('audios','contentsController@audios'); 
 
-Route::post('images','contentsController@images');
+Route::post('images','contentsController@storeImages');
 Route::post('videos','contentsController@videos');
 Route::post('texts','contentsController@texts');
 Route::post('audios','contentsController@audios');

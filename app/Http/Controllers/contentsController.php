@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Faker\Provider\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Image;
 
 class contentsController extends Controller
 {
@@ -20,44 +21,51 @@ class contentsController extends Controller
         $title = "Content-images";
         $data = "this page works fine";
 
-        $name = $request['imageName'];
-        $description = $request['description'];
+        
+
+        return view('contents/content-image', compact('title','data'));
+    }
+
+    public function storeImages(Request $request){
+        // $fileName = '';
         $image = $request['image'];
-        $urrl = '';
         if ($image) {
-            $image = $request->image->store('public/imageCont');
-            print($request->image->store('public/imageCont'));
-            // print(Storage::putFile('public',$request->file('image')));
+            // get file name with extension
+            $fileNameWithExt = $image->getClientOriginalName();
+
+            // get file name alone
+            $file = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+            // get file extension
+            $ext = $image->getClientOriginalExtension();
             
-            $urrl = Storage::url($image);
-            // print($urrl);
-
-            // return $urrl;
-
+            // file name to store
+            $fileName = $file.'_'.time().'.'.$ext;
+            
+            $image = $request->image->storeAs('public/imageCont', $fileName);
+            // $urrl = Storage::url($image);
+            
             // *****to be enabled once running******
             // return redirect('images');
         }else{
+            $fileName = "noimage.png";
             print("please select an image");
         }
 
-        // if ($request['image']) {
-        //     $image = $request['image'];
-
-        //     $filename = time() . '.' . $image->getClientOriginalExtension();
-        //     $location = public_path('images/' . $filename);
-
-        //     File::make($image)->resize(800, 400)->save($location);
-
-        //     $image = $filename;
-        //     print($filename);
-        // }
-
-        return view('contents/content-image', compact('title','data','urrl'));
+        // create the post
+        $imgCont = new Image;
+        $imgCont->title = $request['title'];
+        $imgCont->description = $request['description'];
+        $imgCont->imageName =  $fileName;
+        $imgCont->save();
     }
+
+
+
 
     public function deleteImageContent($id){
         // get the image name
-        $imageContent = Table_Name::select('image')->where('id',$id)->first();
+        $imageContent = Image::select('image')->where('id',$id)->first();
 
         // get path
         $image_path = 'imageCont/';
@@ -68,7 +76,7 @@ class contentsController extends Controller
         };
 
         // deleting from the db
-        tableName::where('id',$id)->update(['image'=>'']);
+        Image::where('id',$id)->update(['image'=>'']);
 
     }
 
