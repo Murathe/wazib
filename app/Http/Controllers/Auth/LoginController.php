@@ -78,8 +78,9 @@ class LoginController extends Controller
         $user = \DB::table('login')->where('username',$username)->limit(1)->first();
         if($user->username == $username && $user->password == $password)
         {
-            session(['is_logged_in'=> TRUE, 'therapist_name' => $user->username]);
-            return redirect('home');
+            session(['is_logged_in' => TRUE, 'therapist_name' => $user->username]);
+            return redirect('dashboard');
+
         }
         else if($user->username != $username || $user->password !=$password)
         {
