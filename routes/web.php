@@ -15,14 +15,14 @@ use App\Http\Controllers\contentsController;
 
 Route::get('contents','contentsController@index');  //controller styles for urls and routes
 Route::get('contents/images','contentsController@images');  
-Route::get('videos','contentsController@videos');  
-Route::get('texts','contentsController@texts'); 
-Route::get('audios','contentsController@audios'); 
+Route::get('contents/videos','contentsController@videos');  
+Route::get('contents/texts','contentsController@texts'); 
+Route::get('contents/audios','contentsController@audios'); 
 
-Route::post('images','contentsController@storeImages');
-Route::post('videos','contentsController@storeVideos');
-Route::post('texts','contentsController@storeTexts');
-Route::post('audios','contentsController@storeAudios');
+Route::post('contents/images','contentsController@storeImages');
+Route::post('contents/videos','contentsController@storeVideos');
+Route::post('contents/texts','contentsController@storeTexts');
+Route::post('contents/audios','contentsController@storeAudios');
 
 
 

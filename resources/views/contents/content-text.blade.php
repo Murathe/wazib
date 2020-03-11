@@ -157,9 +157,10 @@
                     <h4 class="card-title"><a></a></h4>
                     {{-- <!-- Text --> --}}
                     <div class="card-text">
-                        <form class="text-center" style="color: #757575;" action="texts" method="POST" enctype="multipart/form-data">
+                        <form class="text-center" style="color: #757575;" action="contents/texts" method="POST" enctype="multipart/form-data">
                             {{-- field1 --}}
-                            {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
+                            {{-- <input type="hidden" name="_token" value="{{  }}"> --}}
+                            {{ csrf_field() }}
                             <div class="md-form">
                                 <input type="text" id="inputTextName" name="textName" class="form-control">
                                 <label for="inputTextName">Title</label>
@@ -180,6 +181,7 @@
                                 (Optional)<br>      {{-- to be removed if not needed --}}
                                 <input type="file" id="inputFile" name="file">
                             </div>
+                            
                             <div class="modal-footer justify-content-center">
                                 {{-- <!-- Button --> --}}
                                 <button type="submit" id="Submit" name="submit" class="btn btn-deep-orange btn-rounded">Post</button>

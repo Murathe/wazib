@@ -159,7 +159,7 @@
                         <h4 class="card-title"><a></a></h4>
                         {{-- <!-- Text --> --}}
                         <div class="card-text">
-                            <form class="text-center" style="color: #757575;" action="audios" method="POST" enctype="multipart/form-data">
+                            <form class="text-center" style="color: #757575;" action="contents/audios" method="POST" enctype="multipart/form-data">
                                 {{-- field1 --}}
                                 {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                                 <div class="md-form">

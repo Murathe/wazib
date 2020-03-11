@@ -38,7 +38,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('/videos'); !!}">
+                        <a class="btn btn-info" href="{!! url('contents/videos'); !!}">
                             <i class="fas fa-image left"></i> View Contents
                         </a>
                     </div>
@@ -61,7 +61,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('/texts'); !!}">
+                        <a class="btn btn-info" href="{!! url('contents/texts'); !!}">
                             <i class="fas fa-image left"></i> View Contents
                         </a>
                     </div>
@@ -84,7 +84,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('/audios'); !!}">
+                        <a class="btn btn-info" href="{!! url('contents/audios'); !!}">
                             <i class="fas fa-image left"></i> View Contents
                         </a>
                     </div>
