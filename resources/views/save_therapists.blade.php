@@ -10,13 +10,10 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="/addNewTherapistToDB">
                         {{ csrf_field() }}
-
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                             <label for="username" class="col-md-4 control-label">Therapist Name</label>
-
                             <div class="col-md-6">
                                 <input id="therapist_name" type="text" class="form-control" name="therapist_name" value="{{ old('therapist_name') }}" required autofocus>
-
                                 @if ($errors->has('therapist_name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('therapist_name') }}</strong>
@@ -24,13 +21,10 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                             <label for="username" class="col-md-4 control-label">Therapist Email</label>
-
                             <div class="col-md-6">
                                 <input id="therapist_email" type="email" class="form-control" name="therapist_email" value="{{ old('therapist_name') }}" required autofocus>
-
                                 @if ($errors->has('therapist_email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('therapist_email') }}</strong>
@@ -38,10 +32,8 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Category</label>
-
                             <div class="col-md-6">
                                 <input id="therapist_category" type="text" class="form-control" name="therapist_category" required>
 
@@ -52,8 +44,6 @@
                                 @endif
                             </div>
                         </div>
-
-
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
