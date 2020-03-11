@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\support\Facades\DB;
 use Illuminate\support\Facades\input;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -28,7 +29,17 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected function redirectTo()
+    // {
+    //     if(Auth::user()->usertype == 'admin')
+    //     {
+    //         return 'dashboard';
+    //     }
+    //     else
+    //     {
+    //         return 'home';
+    //     }
+    // }
 
     /**
      * Create a new controller instance.
@@ -69,6 +80,7 @@ class LoginController extends Controller
         {
             session(['is_logged_in' => TRUE, 'therapist_name' => $user->username]);
             return redirect('dashboard');
+
         }
         else if($user->username != $username || $user->password !=$password)
         {
