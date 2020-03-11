@@ -159,21 +159,21 @@
                         <h4 class="card-title"><a></a></h4>
                         {{-- <!-- Text --> --}}
                         <div class="card-text">
-                            <form class="text-center" style="color: #757575;" action="audio" method="POST">
+                            <form class="text-center" style="color: #757575;" action="audios" method="POST" enctype="multipart/form-data">
                                 {{-- field1 --}}
                                 {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                                 <div class="md-form">
-                                    <input type="text" id="inputImageName" name="imageName" class="form-control">
-                                    <label for="inputImageName">Image Name</label>
+                                    <input type="text" id="inputTitle" name="title" class="form-control">
+                                    <label for="inputTitle">Title</label>
                                 </div>
                 
                                 <div class="md-form">
                                     <input type="text" id="inputDescription" name="description" class="form-control">
-                                    <label for="inputDescription">Breif Description</label>
+                                    <label for="inputDescription">Description</label>
                                 </div>
                 
                                 <div class="md-form" style="text-align:left;">
-                                    <input type="file" id="inputImage" name="image">
+                                    <input type="file" id="inputFile" name="file">
                                 </div>
                                 <div class="modal-footer justify-content-center">
                                     {{-- <!-- Button --> --}}
