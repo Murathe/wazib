@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <div class="col-md-1">
+    <div class=" sm-0 col-md-2 xs-0">
     </div>
-    <div class="col-md-5">
+    <div class="col-sm-6">
       <div class="landingc card">
 
         <!-- Card image -->
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-sm-6">
       <div class="landingc card">
 
         <!-- Card image -->
@@ -27,12 +27,12 @@
         <!-- Card content -->
         <div class="card-body">
           <!-- Button -->
-          <button class="btn btn-danger">Service Provider</button>
+          <button class="btn btn-outline-info">Service Provider</button>
         </div>
 
       </div>
     </div>
-    <div class="col-md-1">
+    <div class="sm-0 xs-0 col-md-2">
 
     </div>
   </div>

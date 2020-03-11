@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () { 
     return view('dashboard');
-
+});
 
     Route::get('laraquiz/home', 'HomeController@laraquizIndex');
     Route::resource('tests', 'TestsController');
@@ -54,10 +54,6 @@ Route::post('audios','contentsController@audios');
 // Route::get('/', function () {
 //     return view('contents');             //closure style for urls
 // });
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 

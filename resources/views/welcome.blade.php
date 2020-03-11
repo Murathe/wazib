@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-md-12">
       <!-- Card -->
-      <div class="card col-md-4">
+      <div class="card col-sm-6 col-md-4">
 
         <!-- Card image -->
         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
