@@ -28,9 +28,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    <a class="navbar-brand" href="{{ url('/') }}">Wazi</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -77,7 +75,7 @@
                                 </ul>
                             </li>
                         @else
-                            <li><a href="/login">Login</a></li>
+                            <li><a href="/login">Login to access dashboard</a></li>
                         @endif
                     </ul>
                 </div>
