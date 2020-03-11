@@ -33,7 +33,7 @@
                     </button>
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="img/WaziLogo.png" alt="">
+                        <img src="img/WaziLogo.png" alt="Wazi Logo" class="img-responsive" style="width: 10px;">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
