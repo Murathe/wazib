@@ -5,7 +5,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="login panel panel-default">
-                <div class="heading panel-heading">Login</div>
+                <div class="heading panel-heading">
+                  <img src="img/WaziLogo.png" alt="" srcset="">
+                </div>
 
                 <div class="cbody panel-body">
 

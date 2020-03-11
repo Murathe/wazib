@@ -5,7 +5,7 @@
   <div class="row">
     <div class=" sm-0 col-md-2 xs-0">
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 col-md-4">
       <div class="landingc card">
 
         <!-- Card image -->
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 col-md-4">
       <div class="landingc card">
 
         <!-- Card image -->

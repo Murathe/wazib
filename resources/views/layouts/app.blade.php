@@ -9,6 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <!-- md bootstrap -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -32,7 +33,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand mr-auto" href="{{ url('/') }}">
                         <img src="img/WaziLogo.png" alt="">
                     </a>
                 </div>
