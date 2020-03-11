@@ -154,17 +154,17 @@
             
                     {{-- <!-- Title --> --}}
                     {{-- <h5 class="card-header info-color white-text text-center py-4">
-                        <strong>Add Image Content</strong>
+                        <strong>Add Video Content</strong>
                     </h5> --}}
                     <h4 class="card-title"><a></a></h4>
                     {{-- <!-- Text --> --}}
                     <div class="card-text">
-                        <form class="text-center" style="color: #757575;" action="videos" method="POST">
+                        <form class="text-center" style="color: #757575;" action="videos" method="POST" enctype="multipart/form-data">
                             {{-- field1 --}}
                             {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                             <div class="md-form">
-                                <input type="text" id="inputImageName" name="imageName" class="form-control">
-                                <label for="inputImageName">Image Name</label>
+                                <input type="text" id="inputTitle" name="title" class="form-control">
+                                <label for="inputTitle">Video Name</label>
                             </div>
             
                             <div class="md-form">
@@ -173,7 +173,7 @@
                             </div>
             
                             <div class="md-form" style="text-align:left;">
-                                <input type="file" id="inputImage" name="image">
+                                <input type="file" id="inputVideo" name="video">
                             </div>
                             <div class="modal-footer justify-content-center">
                                 {{-- <!-- Button --> --}}
@@ -197,7 +197,8 @@
 </div>
 
 <div class="text-center">
-    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#orangeModalSubscription">Launch
-      modal Subscription</a>
+    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#orangeModalSubscription">
+        Add Video Content
+    </a>
   </div>
 @endsection

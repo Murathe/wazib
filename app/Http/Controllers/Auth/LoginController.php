@@ -61,11 +61,13 @@ class LoginController extends Controller
         $rules = [
             'username' => 'required',
             'password' => 'required',
+
         ];
 
         $messages = [
             'username.required' => 'Enter username',
             'password.required' => 'Enter password ',
+
 
         ];
         $this->validate($request, $rules, $messages);
@@ -84,6 +86,7 @@ class LoginController extends Controller
             $request->session()->flash('Incorrect_password','Invalid Username & Password.');
             // return redirect('/admin/login');
             echo "Wrong Password";
+
         }
     }
 }

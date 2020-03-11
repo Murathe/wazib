@@ -128,9 +128,7 @@
     <!-- Table with panel -->
     </div>
     {{-- end table --}}
-
-
-
+    
 
     {{-- MODAL SECTION --}}
     <div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -159,12 +157,13 @@
                         <h4 class="card-title"><a></a></h4>
                         {{-- <!-- Text --> --}}
                         <div class="card-text">
-                            <form class="text-center" style="color: #757575;" action="images" method="POST">
+                            <form class="text-center" style="color: #757575;" action="images" method="POST" enctype="multipart/form-data">
                                 {{-- field1 --}}
                                 {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
+                                {{ csrf_field() }}
                                 <div class="md-form">
-                                    <input type="text" id="inputImageName" name="imageName" class="form-control">
-                                    <label for="inputImageName">Image Name</label>
+                                    <input type="text" id="inputContentName" name="title" class="form-control">
+                                    <label for="inputContentName">Title</label>
                                 </div>
                 
                                 <div class="md-form">
