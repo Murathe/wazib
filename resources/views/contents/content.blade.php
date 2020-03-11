@@ -17,7 +17,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('/images'); !!}"><i class="fas fa-image left"></i> View Contents</a>
+                        <a class="btn btn-info" href="{!! url('contents/images'); !!}"><i class="fas fa-image left"></i> View Contents</a>
                     </div>
                 </div>
         
