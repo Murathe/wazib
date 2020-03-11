@@ -141,16 +141,6 @@ class contentsController extends Controller
         $title = "Content-texts";
         $data = "this page works fine";
 
-        $title = $request['title'];
-        $description = $request['description'];
-        $textContent = $request['textContent'];
-        $file = $request['file'];
-        print($file);
-
-        if($file){
-            print($request->file->store('public/textCont'));
-        }
-
         
         return view('contents/content-text', compact('title','data'));
     }
@@ -163,13 +153,13 @@ class contentsController extends Controller
             $fileNameWithExt = $file->getClientOriginalName();
 
             // get file name alone
-            $file = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $fileNm = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
 
             // get file extension
             $ext = $file->getClientOriginalExtension();
             
             // file name to store
-            $fileName = $file.'_'.time().'.'.$ext;
+            $fileName = $fileNm.'_'.time().'.'.$ext;
             
             $files = $request->file->storeAs('public/textCont', $fileName);
             // print($request->video->store('public/videoCont'));
@@ -182,9 +172,9 @@ class contentsController extends Controller
 
         // create the new image
         $textCont = new Text;
-        $textCont->title = $request['title'];
+        $textCont->title = $request['textName'];
         $textCont->description = $request['description'];
-        $textCont->content = $request['content'];
+        $textCont->content = $request['textContent'];
         $textCont->fileName =  $fileName;
         $textCont->save();
 
