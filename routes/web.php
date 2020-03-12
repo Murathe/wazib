@@ -35,6 +35,7 @@ Route::group(['middleware'  => ['auth','admin']], function() {
 
 Route::get('/dashboard', function () { 
     return view('dashboard');
+});
 // Route::get('/addTherapist', function(){
 //     return view('save_therapists');
 // });
