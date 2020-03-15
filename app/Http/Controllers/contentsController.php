@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Image;
 use App\Video;
 use App\Text;
+use App\Http\Requests\UploadPhotoRequest;
 
 class contentsController extends Controller
 {
@@ -23,16 +24,13 @@ class contentsController extends Controller
         $title = "Content-images";
         $data = "this page works fine";
 
-        
+        $imageContents = Image::all()->toArray();
+        // print($imageContents); 
 
-        return view('contents/content-image', compact('title','data'));
+        return view('contents/content-image', compact('title','data','imageContents'));
     }
 
     public function storeImages(Request $request){
-        // $fileName = '';
-        // this->validate($request, [
-        //     'image' => 'max:2000'
-        // ]);
 
         $image = $request['image'];
         if ($image) {
@@ -130,7 +128,7 @@ class contentsController extends Controller
         $videoCont->save();
 
 
-        return redirect('videos');
+        return redirect('contents/videos');
     }
 
 
@@ -141,8 +139,9 @@ class contentsController extends Controller
         $title = "Content-texts";
         $data = "this page works fine";
 
+        $textContents = Text::all()->toArray();
         
-        return view('contents/content-text', compact('title','data'));
+        return view('contents/content-text', compact('title','data','textContents'));
     }
 
 
@@ -235,6 +234,6 @@ class contentsController extends Controller
         $textCont->save();
 
 
-        return redirect('audios');
+        return redirect('contents/audios');
     }
 }

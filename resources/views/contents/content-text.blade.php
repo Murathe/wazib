@@ -20,7 +20,7 @@
                 </button>
             </div>
         
-            <div class="white-text mx-3">Table name</div>
+            <div class="white-text mx-3">Available Contents</div>
         
             <div>
                 <button type="submit" class="btn btn-outline-white btn-rounded btn-sm px-2">
@@ -51,17 +51,22 @@
                         <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
                     </th>
                     <th class="th-lg">
-                        <a>First Name
+                        <a>Title
                             <i class="fas fa-sort ml-1"></i>
                         </a>
                     </th>
                     <th class="th-lg">
-                        <a href="">Last Name
+                        <a href="">Description
                             <i class="fas fa-sort ml-1"></i>
                         </a>
                     </th>
                     <th class="th-lg">
-                        <a href="">Username
+                        <a href="">Content
+                            <i class="fas fa-sort ml-1"></i>
+                        </a>
+                    </th>
+                    <th class="th-lg">
+                        <a href="">File Name
                             <i class="fas fa-sort ml-1"></i>
                         </a>
                     </th>
@@ -71,51 +76,18 @@
     
             <!--Table body-->
             <tbody>
+                @foreach($textContents as $data)
                 <tr>
                     <th scope="row">
                         <input class="form-check-input" type="checkbox" id="checkbox1">
                         <label class="form-check-label" for="checkbox1" class="label-table"></label>
                     </th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>{{ $data['title'] }}</td>
+                    <td>{{ $data['description'] }}</td>
+                    <td>{{ $data['content'] }}</td>
+                    <td>{{ $data['fileName'] }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">
-                        <input class="form-check-input" type="checkbox" id="checkbox2">
-                        <label class="form-check-label" for="checkbox2" class="label-table"></label>
-                    </th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <input class="form-check-input" type="checkbox" id="checkbox3">
-                        <label class="form-check-label" for="checkbox3" class="label-table"></label>
-                    </th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <input class="form-check-input" type="checkbox" id="checkbox4">
-                        <label class="form-check-label" for="checkbox4" class="label-table"></label>
-                    </th>
-                    <td>Paul</td>
-                    <td>Topolski</td>
-                    <td>@P_Topolski</td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <input class="form-check-input" type="checkbox" id="checkbox5">
-                        <label class="form-check-label" for="checkbox5" class="label-table"></label>
-                    </th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                @endforeach
             </tbody>
             <!--Table body-->
             </table>
@@ -137,7 +109,7 @@
         <div class="modal-content">
             <!--Header-->
             <div class="modal-header text-center" style="color:black;">
-                <h4 class="modal-title white-text w-100 font-weight-bold py-2">Add Text Content</h4>
+                <h4 class="modal-title white-text w-100 font-weight-bold py-2">Add Content</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">&times;</span>
                 </button>
@@ -157,7 +129,7 @@
                     <h4 class="card-title"><a></a></h4>
                     {{-- <!-- Text --> --}}
                     <div class="card-text">
-                        <form class="text-center" style="color: #757575;" action="contents/texts" method="POST" enctype="multipart/form-data">
+                        <form class="text-center" style="color: #757575;" action="texts" method="POST" enctype="multipart/form-data">
                             {{-- field1 --}}
                             {{-- <input type="hidden" name="_token" value="{{  }}"> --}}
                             {{ csrf_field() }}
@@ -205,6 +177,6 @@
 
 <div class="text-center">
     <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#orangeModalSubscription">Launch
-      Add Text Content</a>
+      Add Content</a>
   </div>
 @endsection

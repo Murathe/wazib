@@ -3,7 +3,7 @@
 @section('title', $title)
 
 @section('body')
-    <div class="row" style="">
+    <div class="row" style="text-align:center;">
         {{-- card image --}}
         <div class="col-md-4" style="margin-top:2rem;">
             <!-- Card -->
@@ -17,7 +17,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('contents/images'); !!}"><i class="fas fa-image left"></i> View Contents</a>
+                        <a class="btn btn-info" href="{!! url('images'); !!}"><i class="fas fa-image left"></i> View Contents</a>
                     </div>
                 </div>
         
@@ -25,7 +25,7 @@
             <!-- Card -->
         </div>
 
-        {{-- card video --}}
+        {{-- card video
         <div class="col-md-4" style="margin-top:2rem;">
             <!-- Card -->
             <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
@@ -38,7 +38,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('contents/videos'); !!}">
+                        <a class="btn btn-info" href="{!! url('videos'); !!}">
                             <i class="fas fa-image left"></i> View Contents
                         </a>
                     </div>
@@ -46,7 +46,7 @@
         
             </div>
             <!-- Card -->
-        </div>
+        </div> --}}
 
         {{-- card text --}}
         <div class="col-md-4" style="margin-top:2rem;">
@@ -61,7 +61,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('contents/texts'); !!}">
+                        <a class="btn btn-info" href="{!! url('texts'); !!}">
                             <i class="fas fa-image left"></i> View Contents
                         </a>
                     </div>
@@ -71,7 +71,7 @@
             <!-- Card -->
         </div>
 
-        {{-- card audio --}}
+        {{-- card audio
         <div class="col-md-4" style="margin-top:2rem;">
             <!-- Card -->
             <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
@@ -84,7 +84,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                         optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                         Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-info" href="{!! url('contents/audios'); !!}">
+                        <a class="btn btn-info" href="{!! url('audios'); !!}">
                             <i class="fas fa-image left"></i> View Contents
                         </a>
                     </div>
@@ -92,6 +92,6 @@
         
             </div>
             <!-- Card -->
-        </div>
+        </div> --}}
     </div>
 @endsection
