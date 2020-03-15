@@ -14,18 +14,13 @@
 use App\Http\Controllers\contentsController;
 
 Route::get('contents','contentsController@index');  //controller styles for urls and routes
-Route::get('images','contentsController@images');  
-Route::get('videos','contentsController@videos');  
-Route::get('texts','contentsController@texts'); 
-Route::get('audios','contentsController@audios'); 
+Route::get('content','contentsController@contents'); 
 
-Route::post('images/store','contentsController@storeImages');
-Route::post('videos','contentsController@storeVideos');
-Route::post('texts','contentsController@storeTexts');
-Route::post('audios','contentsController@storeAudios');
+Route::post('content/store','contentsController@storeContents');
+Route::post('storeTag','contentsController@storeTags');
 
 // for deleting
-Route::delete('images/{id}', 'contentsController@deleteImageContent');
+Route::delete('content/{id}', 'contentsController@deleteContent');
 
 
 

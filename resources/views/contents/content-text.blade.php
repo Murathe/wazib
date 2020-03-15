@@ -56,12 +56,12 @@
                         </a>
                     </th>
                     <th class="th-lg">
-                        <a href="">Description
+                        <a href="">Content
                             <i class="fas fa-sort ml-1"></i>
                         </a>
                     </th>
                     <th class="th-lg">
-                        <a href="">Content
+                        <a>Tag
                             <i class="fas fa-sort ml-1"></i>
                         </a>
                     </th>
@@ -76,16 +76,16 @@
     
             <!--Table body-->
             <tbody>
-                @foreach($textContents as $data)
+                @foreach($contents as $data)
                 <tr>
                     <th scope="row">
                         <input class="form-check-input" type="checkbox" id="checkbox1">
                         <label class="form-check-label" for="checkbox1" class="label-table"></label>
                     </th>
                     <td>{{ $data['title'] }}</td>
-                    <td>{{ $data['description'] }}</td>
                     <td>{{ $data['content'] }}</td>
-                    <td>{{ $data['fileName'] }}</td>
+                    <td>{{ $data['tag'] }}</td>
+                    <td>{{ $data['file'] }}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -129,23 +129,38 @@
                     <h4 class="card-title"><a></a></h4>
                     {{-- <!-- Text --> --}}
                     <div class="card-text">
-                        <form class="text-center" style="color: #757575;" action="texts" method="POST" enctype="multipart/form-data">
+                        <form class="text-center" style="color: #757575;" action="content/store" method="POST" enctype="multipart/form-data">
                             {{-- field1 --}}
                             {{-- <input type="hidden" name="_token" value="{{  }}"> --}}
                             {{ csrf_field() }}
                             <div class="md-form">
-                                <input type="text" id="inputTextName" name="textName" class="form-control">
+                                <input type="text" id="inputTextName" name="title" class="form-control">
                                 <label for="inputTextName">Title</label>
                             </div>
             
-                            <div class="md-form">
+                            {{-- <div class="md-form">
                                 <input type="text" id="inputDescription" name="description" class="form-control">
                                 <label for="inputDescription">Breif Description</label>
+                            </div> --}}
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Tags</label>
+                                </div>
+                                <select class="browser-default custom-select" id="inputGroupSelect01" name="tag">
+                                    <option selected>Choose...</option>
+                                    @foreach($tags as $data)
+                                    <option value="{{ $data['id'] }}">{{ $data['name'] }}</option>
+                                    @endforeach
+                                    <a>
+                                        <option>Add New Tag</option>
+                                    </a>
+                                </select>
                             </div>
 
                             <!--Textarea -->
                             <div class="md-form">
-                                <textarea id="form10" class="md-textarea form-control" rows="3" name="textContent"></textarea>
+                                <textarea id="form10" class="md-textarea form-control" rows="3" name="content"></textarea>
                                 <label for="form10">Content</label>
                             </div>
                                         
@@ -177,6 +192,51 @@
 
 <div class="text-center">
     <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#orangeModalSubscription">Launch
-      Add Content</a>
+      Add Content
+    </a>
+</div>
+
+<!-- Button trigger modal-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPush">Launch modal</button>
+
+<!--Modal: modalPush-->
+<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Add Tag</p>
+      </div>
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" method="POST" action="storeTag" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <!--Body-->
+            <div class="modal-body">
+
+            {{-- <i class="fas fa-bell fa-4x animated rotateIn mb-4"></i> --}}
+
+                <!-- E-mail -->
+                <div class="md-form mt-0">
+                    <input type="text" id="materialRegisterFormEmail" class="form-control" name="name">
+                    <label for="materialRegisterFormEmail">Tag Name</label>
+                </div>
+                
+            </div>
+            
+            <!--Footer-->
+            <div class="modal-footer flex-center">
+                <button type="submit" id="Submit" name="submit" class="btn btn-outline-info">save</button>
+                <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Cancel</a>
+            </div>
+        </form>
+        <!-- Form -->
+    </div>
+    <!--/.Content-->
   </div>
+</div>
+<!--Modal: modalPush-->
+
 @endsection
