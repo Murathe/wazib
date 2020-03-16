@@ -85,6 +85,7 @@
                     <td>{{ $data['title'] }}</td>
                     <td>{{ $data['content'] }}</td>
                     <td>{{ $data['tag'] }}</td>
+                    {{-- <td>{{ $data->tag->name }}</td> --}}
                     <td>{{ $data['file'] }}</td>
                 </tr>
                 @endforeach
@@ -153,10 +154,13 @@
                                     <option value="{{ $data['id'] }}">{{ $data['name'] }}</option>
                                     @endforeach
                                     <a>
-                                        <option>Add New Tag</option>
+                                        <option>
+                                            Add New Tag
+                                        </option>
                                     </a>
-                                </select>
+                                </select><br>
                             </div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPush" style="width:;">Add Tag</button>
 
                             <!--Textarea -->
                             <div class="md-form">
