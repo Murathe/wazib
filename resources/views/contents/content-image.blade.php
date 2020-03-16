@@ -8,6 +8,8 @@
         <!-- Table with panel -->
         <div class="card card-cascade narrower" style="width:100%;">
 
+            {{-- @foreach($imageContents as $data) --}}
+
             <!--Card image-->
             <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center" style="">
         
@@ -51,17 +53,17 @@
                             <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
                         </th>
                         <th class="th-lg">
-                            <a>First Name
+                            <a>Title
                                 <i class="fas fa-sort ml-1"></i>
                             </a>
                         </th>
                         <th class="th-lg">
-                            <a href="">Last Name
+                            <a href="">Description
                                 <i class="fas fa-sort ml-1"></i>
                             </a>
                         </th>
                         <th class="th-lg">
-                            <a href="">Username
+                            <a href="">Created_time
                                 <i class="fas fa-sort ml-1"></i>
                             </a>
                         </th>
@@ -71,51 +73,17 @@
         
                 <!--Table body-->
                 <tbody>
+                    @foreach($imageContents as $data)
                     <tr>
                         <th scope="row">
-                            <input class="form-check-input" type="checkbox" id="checkbox1">
-                            <label class="form-check-label" for="checkbox1" class="label-table"></label>
+                            <input class="form-check-input" type="checkbox" id="checkbox1" name="contId" value="{{$data['id']}}">
+                        <label class="form-check-label" for="checkbox1" class="label-table"></label>
                         </th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{{ $data['title'] }}</td>
+                        <td>{{ $data['description'] }}</td>
+                        <td>{{ $data['created_at'] }}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">
-                            <input class="form-check-input" type="checkbox" id="checkbox2">
-                            <label class="form-check-label" for="checkbox2" class="label-table"></label>
-                        </th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <input class="form-check-input" type="checkbox" id="checkbox3">
-                            <label class="form-check-label" for="checkbox3" class="label-table"></label>
-                        </th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <input class="form-check-input" type="checkbox" id="checkbox4">
-                            <label class="form-check-label" for="checkbox4" class="label-table"></label>
-                        </th>
-                        <td>Paul</td>
-                        <td>Topolski</td>
-                        <td>@P_Topolski</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <input class="form-check-input" type="checkbox" id="checkbox5">
-                            <label class="form-check-label" for="checkbox5" class="label-table"></label>
-                        </th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    @endforeach
                 </tbody>
                 <!--Table body-->
                 </table>
@@ -157,7 +125,7 @@
                         <h4 class="card-title"><a></a></h4>
                         {{-- <!-- Text --> --}}
                         <div class="card-text">
-                            <form class="text-center" style="color: #757575;" action="contents/images" method="POST" enctype="multipart/form-data">
+                            <form class="text-center" style="color: #757575;" action="images/store" method="POST" enctype="multipart/form-data">
                                 {{-- field1 --}}
                                 {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                                 {{ csrf_field() }}
